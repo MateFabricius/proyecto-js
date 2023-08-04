@@ -41,3 +41,41 @@ while (corte != "ESC") {
   }
   corte = prompt("Elija entre corte o corte con barba")
 }
+
+
+const turnosLibres = [
+  { hora: '09:00', cliente: null },
+  { hora: '10:00', cliente: null },
+  { hora: '11:00', cliente: null },
+  { hora: '12:00', cliente: null },
+  { hora: '13:00', cliente: null }
+  { hora: '14:00', cliente: null },
+  { hora: '15:00', cliente: null },
+  { hora: '16:00', cliente: null },
+  { hora: '17:00', cliente: null },
+  { hora: '18:00', cliente: null }
+];
+
+function mostrarTurnosLibres() {
+  console.log('Turnos libres:');
+  turnosLibres.forEach((turno) => {
+    if (turno.cliente === null) {
+      console.log(turno.hora);
+    }
+  });
+}
+
+function reservarTurno(hora, cliente) {
+  const turnoEncontrado = turnosLibres.find((turno) => turno.hora === hora);
+
+  if (turnoEncontrado) {
+    if (turnoEncontrado.cliente === null) {
+      turnoEncontrado.cliente = cliente;
+      console.log("Turno reservado para " + cliente + "a las " + hora )
+    } else {
+      console.log("El turno a las " + hora + "ya está reservado.");
+    }
+  } else {
+    console.log('Hora inválida. Por favor, elija una hora disponible.');
+  }
+}
