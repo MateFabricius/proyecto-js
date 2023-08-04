@@ -48,7 +48,7 @@ const turnosLibres = [
   { hora: '10:00', cliente: null },
   { hora: '11:00', cliente: null },
   { hora: '12:00', cliente: null },
-  { hora: '13:00', cliente: null }
+  { hora: '13:00', cliente: null },
   { hora: '14:00', cliente: null },
   { hora: '15:00', cliente: null },
   { hora: '16:00', cliente: null },
